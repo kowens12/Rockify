@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A65AD0221FBD2D7300E00E85"
-               BuildableName = "JamesFrancophile.app"
-               BlueprintName = "JamesFrancophile"
-               ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+               BuildableName = "Rockify.app"
+               BlueprintName = "Rockify"
+               ReferencedContainer = "container:Rockify.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A65AD0361FBD2D7300E00E85"
-               BuildableName = "JamesFrancophileTests.xctest"
-               BlueprintName = "JamesFrancophileTests"
-               ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+               BuildableName = "RockifyTests.xctest"
+               BlueprintName = "RockifyTests"
+               ReferencedContainer = "container:Rockify.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A65AD0411FBD2D7300E00E85"
-               BuildableName = "JamesFrancophileUITests.xctest"
-               BlueprintName = "JamesFrancophileUITests"
-               ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+               BuildableName = "RockifyUITests.xctest"
+               BlueprintName = "RockifyUITests"
+               ReferencedContainer = "container:Rockify.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A65AD0221FBD2D7300E00E85"
-            BuildableName = "JamesFrancophile.app"
-            BlueprintName = "JamesFrancophile"
-            ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+            BuildableName = "Rockify.app"
+            BlueprintName = "Rockify"
+            ReferencedContainer = "container:Rockify.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A65AD0221FBD2D7300E00E85"
-            BuildableName = "JamesFrancophile.app"
-            BlueprintName = "JamesFrancophile"
-            ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+            BuildableName = "Rockify.app"
+            BlueprintName = "Rockify"
+            ReferencedContainer = "container:Rockify.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A65AD0221FBD2D7300E00E85"
-            BuildableName = "JamesFrancophile.app"
-            BlueprintName = "JamesFrancophile"
-            ReferencedContainer = "container:JamesFrancophile.xcodeproj">
+            BuildableName = "Rockify.app"
+            BlueprintName = "Rockify"
+            ReferencedContainer = "container:Rockify.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

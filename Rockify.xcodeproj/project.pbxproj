@@ -39,17 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A65AD0231FBD2D7300E00E85 /* JamesFrancophile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamesFrancophile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65AD0231FBD2D7300E00E85 /* Rockify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rockify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65AD0261FBD2D7300E00E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A65AD0281FBD2D7300E00E85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A65AD02B1FBD2D7300E00E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A65AD02D1FBD2D7300E00E85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65AD0301FBD2D7300E00E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A65AD0321FBD2D7300E00E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A65AD0371FBD2D7300E00E85 /* JamesFrancophileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamesFrancophileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65AD0371FBD2D7300E00E85 /* RockifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65AD03B1FBD2D7300E00E85 /* JamesFrancophileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamesFrancophileTests.swift; sourceTree = "<group>"; };
 		A65AD03D1FBD2D7300E00E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A65AD0421FBD2D7300E00E85 /* JamesFrancophileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamesFrancophileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65AD0421FBD2D7300E00E85 /* RockifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65AD0461FBD2D7300E00E85 /* JamesFrancophileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamesFrancophileUITests.swift; sourceTree = "<group>"; };
 		A65AD0481FBD2D7300E00E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RockCollectionViewController.swift; path = ../RockCollectionViewController.swift; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 		A65AD01A1FBD2D7300E00E85 = {
 			isa = PBXGroup;
 			children = (
-				A65AD0251FBD2D7300E00E85 /* JamesFrancophile */,
-				A65AD03A1FBD2D7300E00E85 /* JamesFrancophileTests */,
-				A65AD0451FBD2D7300E00E85 /* JamesFrancophileUITests */,
+				A65AD0251FBD2D7300E00E85 /* Rockify */,
+				A65AD03A1FBD2D7300E00E85 /* RockifyTests */,
+				A65AD0451FBD2D7300E00E85 /* RockifyUITests */,
 				A65AD0241FBD2D7300E00E85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,14 +97,14 @@
 		A65AD0241FBD2D7300E00E85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A65AD0231FBD2D7300E00E85 /* JamesFrancophile.app */,
-				A65AD0371FBD2D7300E00E85 /* JamesFrancophileTests.xctest */,
-				A65AD0421FBD2D7300E00E85 /* JamesFrancophileUITests.xctest */,
+				A65AD0231FBD2D7300E00E85 /* Rockify.app */,
+				A65AD0371FBD2D7300E00E85 /* RockifyTests.xctest */,
+				A65AD0421FBD2D7300E00E85 /* RockifyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A65AD0251FBD2D7300E00E85 /* JamesFrancophile */ = {
+		A65AD0251FBD2D7300E00E85 /* Rockify */ = {
 			isa = PBXGroup;
 			children = (
 				A65AD0261FBD2D7300E00E85 /* AppDelegate.swift */,
@@ -119,33 +119,33 @@
 				A65AD05A1FBD32F100E00E85 /* Presenter.swift */,
 				A65AD05C1FBD32FE00E00E85 /* Contract.swift */,
 			);
-			path = JamesFrancophile;
+			path = Rockify;
 			sourceTree = "<group>";
 		};
-		A65AD03A1FBD2D7300E00E85 /* JamesFrancophileTests */ = {
+		A65AD03A1FBD2D7300E00E85 /* RockifyTests */ = {
 			isa = PBXGroup;
 			children = (
 				A65AD03B1FBD2D7300E00E85 /* JamesFrancophileTests.swift */,
 				A65AD03D1FBD2D7300E00E85 /* Info.plist */,
 			);
-			path = JamesFrancophileTests;
+			path = RockifyTests;
 			sourceTree = "<group>";
 		};
-		A65AD0451FBD2D7300E00E85 /* JamesFrancophileUITests */ = {
+		A65AD0451FBD2D7300E00E85 /* RockifyUITests */ = {
 			isa = PBXGroup;
 			children = (
 				A65AD0461FBD2D7300E00E85 /* JamesFrancophileUITests.swift */,
 				A65AD0481FBD2D7300E00E85 /* Info.plist */,
 			);
-			path = JamesFrancophileUITests;
+			path = RockifyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A65AD0221FBD2D7300E00E85 /* JamesFrancophile */ = {
+		A65AD0221FBD2D7300E00E85 /* Rockify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A65AD04B1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophile" */;
+			buildConfigurationList = A65AD04B1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "Rockify" */;
 			buildPhases = (
 				A65AD01F1FBD2D7300E00E85 /* Sources */,
 				A65AD0201FBD2D7300E00E85 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = JamesFrancophile;
+			name = Rockify;
 			productName = JamesFrancophile;
-			productReference = A65AD0231FBD2D7300E00E85 /* JamesFrancophile.app */;
+			productReference = A65AD0231FBD2D7300E00E85 /* Rockify.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A65AD0361FBD2D7300E00E85 /* JamesFrancophileTests */ = {
+		A65AD0361FBD2D7300E00E85 /* RockifyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A65AD04E1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophileTests" */;
+			buildConfigurationList = A65AD04E1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "RockifyTests" */;
 			buildPhases = (
 				A65AD0331FBD2D7300E00E85 /* Sources */,
 				A65AD0341FBD2D7300E00E85 /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				A65AD0391FBD2D7300E00E85 /* PBXTargetDependency */,
 			);
-			name = JamesFrancophileTests;
+			name = RockifyTests;
 			productName = JamesFrancophileTests;
-			productReference = A65AD0371FBD2D7300E00E85 /* JamesFrancophileTests.xctest */;
+			productReference = A65AD0371FBD2D7300E00E85 /* RockifyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A65AD0411FBD2D7300E00E85 /* JamesFrancophileUITests */ = {
+		A65AD0411FBD2D7300E00E85 /* RockifyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A65AD0511FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophileUITests" */;
+			buildConfigurationList = A65AD0511FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "RockifyUITests" */;
 			buildPhases = (
 				A65AD03E1FBD2D7300E00E85 /* Sources */,
 				A65AD03F1FBD2D7300E00E85 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				A65AD0441FBD2D7300E00E85 /* PBXTargetDependency */,
 			);
-			name = JamesFrancophileUITests;
+			name = RockifyUITests;
 			productName = JamesFrancophileUITests;
-			productReference = A65AD0421FBD2D7300E00E85 /* JamesFrancophileUITests.xctest */;
+			productReference = A65AD0421FBD2D7300E00E85 /* RockifyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A65AD01E1FBD2D7300E00E85 /* Build configuration list for PBXProject "JamesFrancophile" */;
+			buildConfigurationList = A65AD01E1FBD2D7300E00E85 /* Build configuration list for PBXProject "Rockify" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,9 +236,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A65AD0221FBD2D7300E00E85 /* JamesFrancophile */,
-				A65AD0361FBD2D7300E00E85 /* JamesFrancophileTests */,
-				A65AD0411FBD2D7300E00E85 /* JamesFrancophileUITests */,
+				A65AD0221FBD2D7300E00E85 /* Rockify */,
+				A65AD0361FBD2D7300E00E85 /* RockifyTests */,
+				A65AD0411FBD2D7300E00E85 /* RockifyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		A65AD0391FBD2D7300E00E85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A65AD0221FBD2D7300E00E85 /* JamesFrancophile */;
+			target = A65AD0221FBD2D7300E00E85 /* Rockify */;
 			targetProxy = A65AD0381FBD2D7300E00E85 /* PBXContainerItemProxy */;
 		};
 		A65AD0441FBD2D7300E00E85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A65AD0221FBD2D7300E00E85 /* JamesFrancophile */;
+			target = A65AD0221FBD2D7300E00E85 /* Rockify */;
 			targetProxy = A65AD0431FBD2D7300E00E85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -467,7 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateowens.JamesFrancophileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JamesFrancophile.app/JamesFrancophile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rockify.app/Rockify";
 			};
 			name = Debug;
 		};
@@ -481,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateowens.JamesFrancophileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JamesFrancophile.app/JamesFrancophile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rockify.app/Rockify";
 			};
 			name = Release;
 		};
@@ -514,7 +514,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A65AD01E1FBD2D7300E00E85 /* Build configuration list for PBXProject "JamesFrancophile" */ = {
+		A65AD01E1FBD2D7300E00E85 /* Build configuration list for PBXProject "Rockify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65AD0491FBD2D7300E00E85 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65AD04B1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophile" */ = {
+		A65AD04B1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "Rockify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65AD04C1FBD2D7300E00E85 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65AD04E1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophileTests" */ = {
+		A65AD04E1FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "RockifyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65AD04F1FBD2D7300E00E85 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65AD0511FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "JamesFrancophileUITests" */ = {
+		A65AD0511FBD2D7300E00E85 /* Build configuration list for PBXNativeTarget "RockifyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65AD0521FBD2D7300E00E85 /* Debug */,
