@@ -16,8 +16,7 @@
 		A65AD0471FBD2D7300E00E85 /* JamesFrancophileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0461FBD2D7300E00E85 /* JamesFrancophileUITests.swift */; };
 		A65AD0571FBD2DF300E00E85 /* RockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */; };
 		A65AD0591FBD314F00E00E85 /* RockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0581FBD314F00E00E85 /* RockCollectionViewCell.swift */; };
-		A65AD05B1FBD32F100E00E85 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD05A1FBD32F100E00E85 /* Presenter.swift */; };
-		A65AD05D1FBD32FE00E00E85 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD05C1FBD32FE00E00E85 /* Contract.swift */; };
+		A6B2651921AB26200070606E /* RockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B2651821AB26200070606E /* RockView.swift */; };
 		A6F0C8D12194E4CF00F2ABA9 /* RockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +53,7 @@
 		A65AD0481FBD2D7300E00E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RockCollectionViewController.swift; path = ../RockCollectionViewController.swift; sourceTree = "<group>"; };
 		A65AD0581FBD314F00E00E85 /* RockCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockCollectionViewCell.swift; sourceTree = "<group>"; };
-		A65AD05A1FBD32F100E00E85 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		A65AD05C1FBD32FE00E00E85 /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		A6B2651821AB26200070606E /* RockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockView.swift; sourceTree = "<group>"; };
 		A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A65AD0261FBD2D7300E00E85 /* AppDelegate.swift */,
+				A6B2651821AB26200070606E /* RockView.swift */,
 				A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */,
 				A65AD0281FBD2D7300E00E85 /* ViewController.swift */,
 				A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */,
@@ -116,8 +115,6 @@
 				A65AD02D1FBD2D7300E00E85 /* Assets.xcassets */,
 				A65AD02F1FBD2D7300E00E85 /* LaunchScreen.storyboard */,
 				A65AD0321FBD2D7300E00E85 /* Info.plist */,
-				A65AD05A1FBD32F100E00E85 /* Presenter.swift */,
-				A65AD05C1FBD32FE00E00E85 /* Contract.swift */,
 			);
 			path = Rockify;
 			sourceTree = "<group>";
@@ -278,10 +275,9 @@
 				A65AD0291FBD2D7300E00E85 /* ViewController.swift in Sources */,
 				A65AD0591FBD314F00E00E85 /* RockCollectionViewCell.swift in Sources */,
 				A65AD0271FBD2D7300E00E85 /* AppDelegate.swift in Sources */,
-				A65AD05D1FBD32FE00E00E85 /* Contract.swift in Sources */,
+				A6B2651921AB26200070606E /* RockView.swift in Sources */,
 				A65AD0571FBD2DF300E00E85 /* RockCollectionViewController.swift in Sources */,
 				A6F0C8D12194E4CF00F2ABA9 /* RockViewModel.swift in Sources */,
-				A65AD05B1FBD32F100E00E85 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Q67G7E28V;
-				INFOPLIST_FILE = JamesFrancophile/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rockify/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateowens.JamesFrancophile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,7 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Q67G7E28V;
-				INFOPLIST_FILE = JamesFrancophile/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rockify/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateowens.JamesFrancophile;
 				PRODUCT_NAME = "$(TARGET_NAME)";

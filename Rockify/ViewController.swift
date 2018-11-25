@@ -10,22 +10,16 @@ import Foundation
 import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    let viewModel = RockViewModel()
+    let rockView = RockView()
     var rockImages = [UIImage]()
     var newRockImage = UIImage()
+    
     @IBOutlet var userImageView: UIImageView?
     @IBOutlet var rockImageView: UIImageView?
     @IBOutlet var canvas: UIView?
     fileprivate var imagePicker = UIImagePickerController()
-    
-    var isCameraAvailable: Bool {
-        return UIImagePickerController.isSourceTypeAvailable(.camera)
-    }
-    var isLibraryAvailable: Bool {
-        return UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
-    }
-    var isCameraAndLibraryAvailable: Bool {
-        return isCameraAvailable && isLibraryAvailable
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -127,15 +121,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     //MARK: Delegate methods
    @IBAction func addPhoto(sender: UIButton) {
-        if isCameraAndLibraryAvailable {
+        if viewModel.isCameraAndLibraryAvailable {
             createAlertForSourceType(sourceType: .camera)
             createAlertForSourceType(sourceType: .photoLibrary)
-        } else if isCameraAvailable {
+        } else if viewModel.isCameraAvailable {
             imagePicker.delegate = self
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
-        } else if isLibraryAvailable {
+        } else if viewModel.isLibraryAvailable {
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = false
@@ -146,7 +140,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         guard let width = chosenImage?.size.width else { return }
         guard let height = chosenImage?.size.height else { return }
         let aspectRatioConstraint = NSLayoutConstraint(item: userImageView as Any,
