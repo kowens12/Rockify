@@ -36,11 +36,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     @objc func setRocks(notification: Notification) {
         if let rockDictionary = notification.userInfo {
-            let newRockImages = rockDictionary.values
-            print(newRockImages)
-            guard let newRockImage = newRockImages as? UIImage else { return }
-            print(newRockImage.description)
-            print(newRockImage.debugDescription)
+            guard let newRockImage = rockDictionary["newRock"] as? UIImage else { return }
             let newRockImageView = UIImageView(image: newRockImage)
 
             newRockImageView.isUserInteractionEnabled = true

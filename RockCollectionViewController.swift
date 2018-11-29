@@ -41,10 +41,10 @@ class RockCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var rockDictionary: [AnyHashable: Any] = [:]
         guard let selectedRock = rockPhotos[indexPath.row] else { return }
-        rockDictionary = ["newRock": selectedRock]
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "rockNotification"), object: nil, userInfo: rockDictionary)
+     //   let rockDictionary = ["newRock": selectedRock]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setRockNotification"), object: nil, userInfo: ["newRock": selectedRock])
+          ///userInfo: [URLContainer.urlKey : url])
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
