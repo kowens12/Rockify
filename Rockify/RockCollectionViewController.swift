@@ -11,7 +11,7 @@ import Foundation
 
 class RockCollectionViewController: UICollectionViewController {
     fileprivate let reuseIdentifier = "RockCell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,16 +24,15 @@ class RockCollectionViewController: UICollectionViewController {
         rockPhotos = [UIImage(named: "rock1"), UIImage(named: "rock2")]
     }
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return rockPhotos.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! RockCollectionViewCell
         let rockImage = rockPhotos[indexPath.row]
@@ -42,10 +41,8 @@ class RockCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var rockDictionary: [AnyHashable: Any] = [:]
         guard let selectedRock = rockPhotos[indexPath.row] else { return }
-        rockDictionary = ["newRock": selectedRock]
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "rockNotification"), object: nil, userInfo: rockDictionary)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setRockNotification"), object: nil, userInfo: ["newRock": selectedRock])
         self.navigationController?.popToRootViewController(animated: true)
     }
 }

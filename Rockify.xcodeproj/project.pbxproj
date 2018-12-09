@@ -14,8 +14,8 @@
 		A65AD0311FBD2D7300E00E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65AD02F1FBD2D7300E00E85 /* LaunchScreen.storyboard */; };
 		A65AD03C1FBD2D7300E00E85 /* JamesFrancophileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD03B1FBD2D7300E00E85 /* JamesFrancophileTests.swift */; };
 		A65AD0471FBD2D7300E00E85 /* JamesFrancophileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0461FBD2D7300E00E85 /* JamesFrancophileUITests.swift */; };
-		A65AD0571FBD2DF300E00E85 /* RockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */; };
 		A65AD0591FBD314F00E00E85 /* RockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65AD0581FBD314F00E00E85 /* RockCollectionViewCell.swift */; };
+		A69BCCF921BD989F0035C696 /* RockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BCCF821BD989F0035C696 /* RockCollectionViewController.swift */; };
 		A6B2651921AB26200070606E /* RockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B2651821AB26200070606E /* RockView.swift */; };
 		A6F0C8D12194E4CF00F2ABA9 /* RockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -51,8 +51,8 @@
 		A65AD0421FBD2D7300E00E85 /* RockifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65AD0461FBD2D7300E00E85 /* JamesFrancophileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamesFrancophileUITests.swift; sourceTree = "<group>"; };
 		A65AD0481FBD2D7300E00E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RockCollectionViewController.swift; path = ../RockCollectionViewController.swift; sourceTree = "<group>"; };
 		A65AD0581FBD314F00E00E85 /* RockCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockCollectionViewCell.swift; sourceTree = "<group>"; };
+		A69BCCF821BD989F0035C696 /* RockCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockCollectionViewController.swift; sourceTree = "<group>"; };
 		A6B2651821AB26200070606E /* RockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockView.swift; sourceTree = "<group>"; };
 		A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +109,7 @@
 				A6B2651821AB26200070606E /* RockView.swift */,
 				A6F0C8D02194E4CF00F2ABA9 /* RockViewModel.swift */,
 				A65AD0281FBD2D7300E00E85 /* ViewController.swift */,
-				A65AD0561FBD2DF300E00E85 /* RockCollectionViewController.swift */,
+				A69BCCF821BD989F0035C696 /* RockCollectionViewController.swift */,
 				A65AD0581FBD314F00E00E85 /* RockCollectionViewCell.swift */,
 				A65AD02A1FBD2D7300E00E85 /* Main.storyboard */,
 				A65AD02D1FBD2D7300E00E85 /* Assets.xcassets */,
@@ -272,11 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69BCCF921BD989F0035C696 /* RockCollectionViewController.swift in Sources */,
 				A65AD0291FBD2D7300E00E85 /* ViewController.swift in Sources */,
 				A65AD0591FBD314F00E00E85 /* RockCollectionViewCell.swift in Sources */,
 				A65AD0271FBD2D7300E00E85 /* AppDelegate.swift in Sources */,
 				A6B2651921AB26200070606E /* RockView.swift in Sources */,
-				A65AD0571FBD2DF300E00E85 /* RockCollectionViewController.swift in Sources */,
 				A6F0C8D12194E4CF00F2ABA9 /* RockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
