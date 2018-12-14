@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JamesFrancophile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rockify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,30 +21,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdS-s9-Pc6">
-                                <rect key="frame" x="188" y="589" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addPhotoWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mZ-Dt-biH"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lf6-Yy-Gps">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lf6-Yy-Gps">
                                 <rect key="frame" x="0.0" y="229" width="375" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dQJ-Jn-bQi" appends="YES" id="PoX-HV-Vi3"/>
+                                    <outletCollection property="gestureRecognizers" destination="bHd-8l-cNw" appends="YES" id="GfM-sQ-2sD"/>
+                                    <outletCollection property="gestureRecognizers" destination="Bhm-eZ-CYv" appends="YES" id="nI0-Rb-wRy"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4d-iZ-nDZ">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4d-iZ-nDZ">
                                 <rect key="frame" x="36" y="254" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lli-PS-EfR">
-                                <rect key="frame" x="88" y="589" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Rock"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="gpb-O3-HQ2" kind="show" id="5X2-nt-l2X"/>
+                                    <outletCollection property="gestureRecognizers" destination="Tk9-LK-2OZ" appends="YES" id="1t5-bN-UVa"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZiC-uI-kKy" appends="YES" id="rQb-LX-17M"/>
+                                    <outletCollection property="gestureRecognizers" destination="tbd-qQ-IRF" appends="YES" id="7fm-Iv-BjP"/>
                                 </connections>
-                            </button>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-Vm-yxK">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="rock2" style="plain" id="J3j-Eq-mSE">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lli-PS-EfR">
+                                            <rect key="frame" x="16" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Rock"/>
+                                            <connections>
+                                                <segue destination="gpb-O3-HQ2" kind="show" id="5X2-nt-l2X"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="camera" id="aVZ-9M-cuh">
+                                        <connections>
+                                            <action selector="addPhotosenderUIButton:" destination="BYZ-38-t0r" id="hrN-j5-iKH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="save" id="aAF-LM-jvV">
+                                        <connections>
+                                            <action selector="shareImage:" destination="BYZ-38-t0r" id="PWs-bc-uEQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -56,13 +78,43 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dQJ-Jn-bQi">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="Isp-Hk-pfq"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Tk9-LK-2OZ">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="cnR-u3-vkc"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="bHd-8l-cNw">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="isk-9q-muF"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="ZiC-uI-kKy">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="rm6-Zk-9a3"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Bhm-eZ-CYv">
+                    <connections>
+                        <action selector="handleRotationWithRecognizer:" destination="BYZ-38-t0r" id="Ifh-hc-LFw"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="tbd-qQ-IRF">
+                    <connections>
+                        <action selector="handleRotationWithRecognizer:" destination="BYZ-38-t0r" id="Wpv-k8-8pA"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
         </scene>
         <!--Rock Library-->
         <scene sceneID="oxp-no-0R4">
             <objects>
-                <collectionViewController title="Rock Library" id="gpb-O3-HQ2" customClass="RockCollectionViewController" customModule="JamesFrancophile" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Rock Library" id="gpb-O3-HQ2" customClass="RockCollectionViewController" customModule="Rockify" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dRV-WJ-Ns8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +126,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RockCell" id="gcq-X6-v7L" userLabel="RockCollectionViewCell" customClass="RockCollectionViewCell" customModule="JamesFrancophile" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RockCell" id="gcq-X6-v7L" userLabel="RockCollectionViewCell" customClass="RockCollectionViewCell" customModule="Rockify" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -121,4 +173,7 @@
             <point key="canvasLocation" x="286" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rock2" width="500" height="436"/>
+    </resources>
 </document>

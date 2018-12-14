@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIToolbarDelegate {
     let viewModel = RockViewModel()
-    let rockView = RockView()
     var rockImages = [UIImage]()
     var newRockImage = UIImage()
+    var rockedImage = UIImage()
     
     @IBOutlet var userImageView: UIImageView?
     @IBOutlet var rockImageView: UIImageView?
@@ -31,19 +31,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                                                selector: #selector(setRocks(notification:)),
                                                name: NSNotification.Name(rawValue: "setRockNotification"), object: nil)
         
-        setGestureRecognizers()
     }
 
     @objc func setRocks(notification: Notification) {
         if let rockDictionary = notification.userInfo {
             guard let newRockImage = rockDictionary["newRock"] as? UIImage else { return }
-            let newRockImageView = UIImageView(image: newRockImage)
-
-            newRockImageView.isUserInteractionEnabled = true
-            newRockImageView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(handlePan(recognizer:))))
-            newRockImageView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(handlePinch(recognizer:))))
-            
-            canvas?.addSubview(newRockImageView)
+            if let rockImageView = rockImageView {
+                rockImageView.image = newRockImage
+                canvas?.addSubview(rockImageView)
+            }
             rockImages.append(newRockImage)
         }
     }
@@ -53,28 +49,32 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 //        });
 //        }
     
-    func handlePan(recognizer: UIPanGestureRecognizer) {
+    @IBAction func handlePan(recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
         if let view = recognizer.view {
-            view.center = CGPoint(x: view.center.x,
-                                  y: view.center.y)
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
         }
-        recognizer.setTranslation(CGPoint.zero, in: self.view)
+        recognizer.setTranslation(CGPoint.zero, in: view)
     }
     
-    func handlePinch(recognizer: UIPinchGestureRecognizer) {
-        var transform = recognizer.view?.transform
-        recognizer.scale = 1.0
+    @IBAction func handlePinch(recognizer: UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.scaledBy(x: recognizer.scale, y: recognizer.scale)
+            recognizer.scale = 1
+        }
     }
     
-    func setGestureRecognizers() {
-        userImageView?.isUserInteractionEnabled = true
-        rockImageView?.isUserInteractionEnabled = true
-        userImageView?.addGestureRecognizer(UIPanGestureRecognizer.init(target: self, action: #selector(viewDidLoad)))
-        userImageView?.addGestureRecognizer(UIPinchGestureRecognizer.init(target: self, action: #selector(viewDidLoad)))
+    @IBAction func handleRotation(recognizer: UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = view.transform.rotated(by: recognizer.rotation)
+            recognizer.rotation = 0
+        }
     }
     
     // MARK: image rendering
-    func renderImage() -> UIImage {
+    
+    func renderImage(sender: UIButton) -> UIImage {
         var contextRect: CGRect
         var contextSize: CGSize
         
@@ -96,8 +96,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
     
-        guard let rockedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
-        
+        self.rockedImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+
         UIGraphicsEndImageContext()
         
         return rockedImage
@@ -115,8 +115,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         rockImageView.image?.draw(in: scaledRockRect)
     }
     
+    func createShareAlert() -> UIActivityViewController {
+        let shareVC = UIActivityViewController(activityItems: [self.rockedImage as Any], applicationActivities: nil)
+        return shareVC
+    }
+    
+    @IBAction func shareImage(_ sender: Any) {
+        let shareVC = self.createShareAlert()
+        shareVC.popoverPresentationController?.sourceView = sender as? UIView
+        self.present(shareVC, animated: true, completion: nil)
+    }
+    
+    
     //MARK: Delegate methods
-   @IBAction func addPhoto(sender: UIButton) {
+    @IBAction func addPhotosenderUIButton(_ sender: Any) {
         if viewModel.isCameraAndLibraryAvailable {
             createAlertForSourceType(sourceType: .camera)
             createAlertForSourceType(sourceType: .photoLibrary)
@@ -216,7 +228,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.present(alert, animated: true, completion: nil)
     }
 }
-
 
     
     
