@@ -12,7 +12,7 @@ import Social
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIToolbarDelegate {
     let viewModel = RockViewModel()
-    var rockImages = [UIImage]()
+    var rockImages = [UIImageView]()
     var newRockImage = UIImage()
     
     @IBOutlet var userImageView: UIImageView?
@@ -36,19 +36,28 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @objc func setRocks(notification: Notification) {
         if let rockDictionary = notification.userInfo {
             guard let newRockImage = rockDictionary["newRock"] as? UIImage else { return }
-            if let rockImageView = rockImageView {
-                rockImageView.image = newRockImage
-                canvas?.addSubview(rockImageView)
-            }
-            rockImages.append(newRockImage)
+            let newRockImageView = UIImageView(image: newRockImage)
+            newRockImageView.image = newRockImage
+            newRockImageView.isUserInteractionEnabled = true
+            newRockImageView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:))))
+            newRockImageView.addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(recognizer:))))
+            canvas?.addSubview(newRockImageView)
+            rockImages.append(newRockImageView)
+            print("\(rockImages) ROCK IMAGES!!!!!!!!")
+            print("\(newRockImageView) ROCK IMAGE VIEW!!!!!!!!")
+            print("\(newRockImage) NEW ROCK IMAGE!!!!!!!!")
         }
     }
-
-//        - (void)setFranco:(NSNotification *)notification {
-//        [self.unFrancoButton setEnabled:YES];
-//        });
-//        }
     
+    @IBAction func undoRock(_ sender: Any) {
+        self.rockImages.last?.removeFromSuperview()
+        self.rockImages.removeLast()
+    }
+    
+    @IBAction func removeAllRocks(_ sender: Any) {
+        
+    }
+
     @IBAction func handlePan(recognizer: UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
         if let view = recognizer.view {
@@ -90,11 +99,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         UIGraphicsGetCurrentContext()
         
         userImageView?.image?.draw(in: contextRect)
-
+        
         if let rockImageView = rockImageView {
             for _ in rockImages {
                 self.drawRockImageWithContextSize(contextSize: contextSize, rockImageView: rockImageView)
             }
+            
+//            for (UIImageView *francoImageView in self.francos) {
+//                [self drawFrancoImageWithContextSize:contextSize2 francoImageView:francoImageView];
+//            }
         }
     
         rockedImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()

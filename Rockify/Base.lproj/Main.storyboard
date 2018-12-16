@@ -65,6 +65,16 @@
                                             <action selector="shareImage:" destination="BYZ-38-t0r" id="PWs-bc-uEQ"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Undo Rock" id="NGR-bt-xKe">
+                                        <connections>
+                                            <action selector="undoRock:" destination="BYZ-38-t0r" id="5vy-oA-al4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Remove Rocks" id="kg7-Ek-G1r">
+                                        <connections>
+                                            <action selector="removeAllRocks:" destination="BYZ-38-t0r" id="KSE-S6-CWt"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -73,7 +83,7 @@
                     <navigationItem key="navigationItem" id="YOk-cU-w6W"/>
                     <connections>
                         <outlet property="canvas" destination="8bC-Xf-vdC" id="vGZ-dT-bbe"/>
-                        <outlet property="rockImageView" destination="l4d-iZ-nDZ" id="NPw-cX-QHV"/>
+                        <outlet property="rocks" destination="l4d-iZ-nDZ" id="NPw-cX-QHV"/>
                         <outlet property="userImageView" destination="lf6-Yy-Gps" id="8yB-Bp-kSp"/>
                     </connections>
                 </viewController>
