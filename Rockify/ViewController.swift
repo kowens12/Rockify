@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
+import Social
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIToolbarDelegate {
     let viewModel = RockViewModel()
     var rockImages = [UIImage]()
     var newRockImage = UIImage()
-    var rockedImage = UIImage()
     
     @IBOutlet var userImageView: UIImageView?
     @IBOutlet var rockImageView: UIImageView?
@@ -74,10 +74,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     // MARK: image rendering
     
-    func renderImage(sender: UIButton) -> UIImage {
+    func renderImage() -> UIImage {
         var contextRect: CGRect
         var contextSize: CGSize
-        
+        var rockedImage = UIImage()
+
         contextRect = userImageView?.image != nil ? CGRect(x: 0,
                                                                y: 0,
                                                                width: userImageView?.frame.size.width ?? 0.0,
@@ -96,7 +97,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
     
-        self.rockedImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+        rockedImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
 
         UIGraphicsEndImageContext()
         
@@ -116,16 +117,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func createShareAlert() -> UIActivityViewController {
-        let shareVC = UIActivityViewController(activityItems: [self.rockedImage as Any], applicationActivities: nil)
+        let activityItems = renderImage()
+        let shareVC = UIActivityViewController(activityItems: [activityItems], applicationActivities: nil)
         return shareVC
     }
     
     @IBAction func shareImage(_ sender: Any) {
         let shareVC = self.createShareAlert()
+       
         shareVC.popoverPresentationController?.sourceView = sender as? UIView
         self.present(shareVC, animated: true, completion: nil)
     }
-    
     
     //MARK: Delegate methods
     @IBAction func addPhotosenderUIButton(_ sender: Any) {
